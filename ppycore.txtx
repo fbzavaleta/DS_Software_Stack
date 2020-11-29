@@ -1,0 +1,16 @@
+#
+#coneptos
+#
+-scalar : magnitud, ex: 12
+-vector : conjunto unidimencional(fila o columna)
+ ex:  [1,5,12] 
+ -array : conjunto bidemencional, filas y columnas
+ ex:
+     21  3
+     1   2 (2x2)
+
+-Array de una lista = vector, obedeciendo todas las leyes
+de operaciones matemáticas. No pueden tener diferentes sizes
+
+-constructor, funcion principal de la clase, que contiene los
+parametros de entrada
