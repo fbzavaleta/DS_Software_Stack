@@ -20,9 +20,9 @@ class vectores():
     def __init__(self):
 
         self.self = self
+     
 
-
-    def operaciones(self, inputs, operador):
+    def operaciones(self, inputs:list , operador:str):
 
         qtd = len(inputs) -1
         flag = 0
@@ -46,13 +46,5 @@ class vectores():
         elif operador == "sub" and flag != 1:
 
             for sumandos in inputs:
-                Su -= np.array( sumandos )
-            return Su
-                
-
-
-
-
-
-testes = [ [1,2,3], [3,5,2], [1,2,6], [1,1,1] ]
-print ( vectores().operaciones(testes,"sum") )
+                Sub -= np.array( sumandos )
+            return Sub
