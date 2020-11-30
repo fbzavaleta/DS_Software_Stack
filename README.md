@@ -8,5 +8,5 @@ Enjoy!!!!!
 
 # Get Started
 
-**git clone https://github.com/fbzavaleta/DS_Software_Stack.git**
-**mv DS_Software_Stack [your_dir_project]**
+> **git clone https://github.com/fbzavaleta/DS_Software_Stack.git**
+> **mv DS_Software_Stack your_dir_project**
