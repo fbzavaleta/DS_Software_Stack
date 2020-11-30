@@ -8,5 +8,14 @@ Enjoy!!!!!
 
 # Get Started
 
-> **git clone https://github.com/fbzavaleta/DS_Software_Stack.git** <br/>
-> **mv DS_Software_Stack your_dir_project**
+*Get the software*
+<br/>
+> git clone https://github.com/fbzavaleta/DS_Software_Stack.git
+<br/>
+> mv DS_Software_Stack your_dir_project**
+
+*Use the software*
+<br/>
+> from (your_project_directory).npycore import vectores
+<br/>
+> vectores().operaciones([[1,2,3],[1,5,6]], "sum")
