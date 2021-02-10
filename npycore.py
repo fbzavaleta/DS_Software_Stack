@@ -5,7 +5,7 @@
 #Data: 29/11/2020                #
 ##################################
 
-import DS_Software_Stack.errores as e
+import DS.errores as e
 import numpy as np
 '''
 Clase Vectores     : Reune las funciones básicas de operación con 
