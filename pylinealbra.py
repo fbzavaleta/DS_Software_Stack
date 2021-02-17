@@ -5,7 +5,7 @@
 #Data: 29/11/2020                #
 ##################################
 
-import DS.errores as e
+import errores as e
 import numpy as np
 '''
 Clase Vectores     : Reune las funciones básicas de operación con 
@@ -24,7 +24,6 @@ class vectores():
 
         self.self = self
 
-
     def set_vector_module(self, inputs_:list):
         qtd = len(inputs_) -1
 
@@ -33,13 +32,13 @@ class vectores():
             if len(inputs_[pos]) != len(inputs_[pos+1]):
                 return 0
             else:
-                return np.zeros( len(inputs_[0]) , dtype=int)
+                return 1
 
-    def sum(self, inputs:list , operador:str):
+    def sum(self, inputs:list):
+        
+        if vectores().set_vector_module(inputs) != 0:
 
-        su = vectores().set_vector_module(inputs)
-
-        if su != 0:
+            Su = np.zeros( len(inputs[0]) , dtype=int)
             for sumandos in inputs:
                 Su += np.array( sumandos )
             return Su
@@ -48,10 +47,9 @@ class vectores():
 
     def substraction(self, inputs:list , operador:str):
 
-        Subs = vectores().set_vector_module(inputs)
+        if vectores().set_vector_module(inputs) != 0:
 
-        if Subs != 0:
-
+            Subs = np.zeros( len(inputs[0]) , dtype=int)
             for subtraendo in inputs:
                 Subs -= np.array( subtraendo )
             return Subs
@@ -59,9 +57,22 @@ class vectores():
             return e.E_LEN
 
     
-    def producto_punto(self, inputs:list):
-        return zip(inputs)
+    def prod_cruz(self, inputs:list):
+        
+        if vectores().set_vector_module(inputs) != 0:
 
+            vector1 = np.array(inputs[0])
+            vector2 = np.array(inputs[1])
+
+            return np.dot( vector1 , vector2 )
+
+        else:
+            return e.E_LEN
+
+
+    def quick_operation():
+
+        #
 
 
 

@@ -14,3 +14,7 @@ de operaciones matemáticas. No pueden tener diferentes sizes
 
 -constructor, funcion principal de la clase, que contiene los
 parametros de entrada
+
+#Producto escalar(dot product)
+
+A.B = a1.b1 + a2.b2 + ... + an.bn
