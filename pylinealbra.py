@@ -70,9 +70,19 @@ class vectores():
             return e.E_LEN
 
 
-    def quick_operation():
+    def quick_operation(self, inputs:list):
 
-        #
+        vecA = np.array(inputs[0])
+        vecB = np.array(inputs[1])
 
+        operation = {
+
+            'modA'     : np.linalg.norm(vecA),
+            'modB'     : np.linalg.norm(vecB),
+            'cosAngle' : np.dot(vecA,vecB) / ( np.linalg.norm(vecA) / np.linalg.norm(vecB) ),
+            'angle'    : np.arccos( np.dot(vecA,vecB) / ( np.linalg.norm(vecA) * np.linalg.norm(vecB) ) )
+        }
+
+        return operation
 
 

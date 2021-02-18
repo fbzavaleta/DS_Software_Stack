@@ -9,3 +9,4 @@ print( al.vectores().sum([a,b]) )
 
 print( al.vectores().prod_cruz([a,b]) )
 
+print( al.vectores().quick_operation([a,b]) )
