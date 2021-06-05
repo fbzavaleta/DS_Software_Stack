@@ -5,7 +5,7 @@
 #Data: 29/11/2020                #
 ##################################
 
-import errores as e
+import DS.errores as e
 import numpy as np
 '''
 Clase Vectores     : Reune las funciones básicas de operación con 
@@ -86,3 +86,17 @@ class vectores():
         return operation
 
 
+class matrix():
+
+    def __init__(self):
+
+        self.self = self
+
+    def operaciones(self, input_:list):
+
+        dic_oper = {}
+
+        dic_oper["exp"] = np.exp(input_)
+        dic_oper["transf"] = np.array(input_).T 
+
+    
