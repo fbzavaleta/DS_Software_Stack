@@ -31,28 +31,27 @@ class Frame():
         self.data[col+'ajus'] = self.data[col].apply( lambda x: (x/(pow(10, len(str(round(x))) - digits))) if (digits != len(str(round(x)))) else x)
         self.data.drop(col,axis=1, inplace=True)
 
+
 class Granularity():
-
     def __init__(self, df_):
-        self.df = df_
+        self.data = df_
 
-    def fname(arg):
-        pass
+    def SizzSub(self,col):
+        first_ = int(self.data[col].index[0])
+        self.data['index'] = self.data[col].index
+        self.data['colval'] = self.data['index'].apply(lambda x: self.data[col][x] if ( x == first_) else self.data[col][x-1])
+        self.data[col + "SizzSub"] = abs( (self.data[col] - self.data['colval']).round(4) )
+
+        self.data.drop('index',axis=1, inplace=True)
+        self.data.drop('colval',axis=1, inplace=True)
         
-class Utilities():
+    def SizzRep(self,col):
+        self.data['index'] = self.data[col].index
+        self.data['colval'] = self.data['index'].apply(lambda x: self.data[col][x] if ( x == first_) else self.data[col][x-1])
+        #self.data[col + "SizzRep"] = abs( (self.data[col] - self.data['colval']).round(4) )
 
-    def __init__(self, df_):
-        self.df = df_
-
-    def SizzSub(col):
-        first_ = self.df[col].index[0]
-        self.df['index'] = self.df[col].index
-        self.df['colval'] = self.df['index'].apply(lambda x: 0 if ( x == first_) else df_[col][x-1])
-        self.df[col + "SizzSub"] = (self.df[col] - self.df['colval']).round(4)
-
-        self.df.drop('index',axis=1, inplace=True)
-        self.df.drop('colval',axis=1, inplace=True)
-        
+        #self.data.drop('index',axis=1, inplace=True)
+        #self.data.drop('colval',axis=1, inplace=True)
         
 
 
